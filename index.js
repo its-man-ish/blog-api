@@ -14,6 +14,8 @@ app.use(blogRouter);
 app.get('/server',(req,res)=>{
     res.send('Server')
 })
-app.listen(5000,()=>{
-    console.log('Server on port 5000')
-})
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}`);
+  console.log('Press Ctrl+C to quit.');
+});
