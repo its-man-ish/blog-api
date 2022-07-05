@@ -10,6 +10,10 @@ const blogSchema = new mongoose.Schema({
     body:{
         type:String
     },
+    image:{
+      data:Buffer,
+      contentType:String
+    },
     author:{
         type:String
     }
